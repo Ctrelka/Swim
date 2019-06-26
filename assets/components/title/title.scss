@@ -1,0 +1,89 @@
+@import "./../../common/constants";
+
+$GREY_LIGHT : #CDD6DE;
+$GREY_DARK : #4B5661;
+$RED : #D0021B;
+$WHITE : #fff;
+
+.titleLittle {
+    &__text {
+        font-family    : "Gilroy";
+        font-style     : normal;
+        font-size      : 40px;
+        line-height    : 40px;
+        text-transform : uppercase;
+        font-weight    : 800;
+        color          : $GREY_LIGHT;
+
+        @include sm {
+            font-size   : 60px;
+            line-height : 60px;
+        }
+
+        @include lg {
+            font-size   : 76px;
+            line-height : 76px;
+        }
+    }
+}
+
+
+.titleMedium {
+    &__text {
+        font-family    : "Gilroy";
+        font-style     : normal;
+        font-size      : 40px;
+        line-height    : 40px;
+        text-transform : uppercase;
+        font-weight    : 800;
+        color          : $GREY_LIGHT;
+
+        @include sm {
+            font-size   : 60px;
+            line-height : 60px;
+        }
+
+        @include lg {
+            font-size   : 80px;
+            line-height : 80px;
+        }
+    }
+}
+
+
+.titleBig {
+    &__text {
+        font-family    : "Gilroy";
+        font-style     : normal;
+        font-size      : 64px;
+        line-height    : 64px;
+        text-transform : uppercase;
+        font-weight    : 800;
+        color          : $GREY_LIGHT;
+
+        @include sm {
+            font-size   : 120px;
+            line-height : 120px;
+        }
+
+        @include md {
+            font-size   : 172px;
+            line-height : 172px;
+        }
+    }
+
+    &__color_red {
+        color : $RED;
+    }
+
+    &__color_grey {
+        color : $GREY_DARK;
+    }
+
+    &__color_white {
+        color : $WHITE;
+        opacity: 0.38;
+        mix-blend-mode: normal;
+    }
+}
+

@@ -1,0 +1,741 @@
+@import "./../../common/constants";
+
+$GREY_LIGHT : #CDD6DE;
+$GREY_MIDDLE : #626262;
+$RED : #D0021B;
+
+.welcome {
+    overflow : hidden;
+
+    &__inner-class {
+        &_active {
+            width  : 100%;
+            height : 100%;
+        }
+    }
+
+    &__scroll{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-height: 40px;
+        top: -70px;
+        transform: rotate(180deg);
+        animation: scrollTop  2s infinite ease;
+    }
+
+    &__tabs {
+        position : relative;
+        height   : 642px;
+
+        @include sm {
+            height : 568px;
+        }
+
+        @include md {
+            height : 490px;
+        }
+
+        @include lg {
+            height : 468px;
+        }
+
+        @include hd {
+            height : 626px;
+        }
+    }
+
+    &__tab {
+        position : absolute;
+        display  : block;
+
+        &_active {
+            display : block;
+        }
+    }
+
+    &__wrapper {
+        display  : block;
+        width    : 350px;
+        position : relative;
+        right    : -22%;
+        z-index  : -1;
+        overflow : hidden;
+
+        @include sm {
+            width      : 400px;
+            position   : absolute;
+            right      : 0%;
+            margin-top : -6rem;
+        }
+
+        @include md {
+            right      : 31%;
+            margin-top : -2rem;
+        }
+
+        @include lg {
+            width      : 450px;
+            margin-top : -1rem;
+        }
+
+        @include hd {
+            width      : 554px;
+            margin-top : -6rem;
+        }
+    }
+
+    &__img {
+        width   : 100%;
+        opacity : 0;
+
+        &_in {
+            animation           : animDescriptionIn 1s 1s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animDescriptionOut 1s;
+            animation-fill-mode : backwards;
+        }
+    }
+
+    &__content {
+        margin-top : -3.75rem;
+
+        @include sm {
+            width      : 66%;
+            margin-top : 8rem;
+        }
+
+        @include md {
+            width      : 51%;
+            margin-top : 4rem;
+        }
+
+        @include lg {
+            width      : 42%;
+            margin-top : 2rem;
+        }
+
+        @include hd {
+            width : 29%;
+        }
+
+        @include hd {
+            margin-top : 8rem;
+        }
+    }
+
+    &__title {
+        transform : translateX(-100%);
+        opacity   : 0;
+
+        &_in {
+            animation           : animTitleIn 1s .3s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animTitleOut 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &__subtitle {
+        transform      : translateX(-100%);
+        opacity        : 0;
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 36px;
+        font-weight    : 800;
+        line-height    : 36px;
+        text-transform : uppercase;
+        color          : $GREY_LIGHT;
+        margin     : {
+            top    : 1rem;
+            bottom : 2rem;
+        }
+
+        @include sm {
+            font-size   : 44px;
+            line-height : 44px;
+        }
+
+        @include lg {
+            margin-top : 2rem;
+        }
+
+        @include hd {
+            margin-bottom : 6rem;
+        }
+
+        &_in {
+            animation           : animTitleIn 1s .5s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animSubtitleOut 1s .15s;
+            animation-fill-mode : backwards;
+        }
+    }
+
+    &__description {
+        color       : $GREY_MIDDLE;
+        font-family : 'Open Sans', sans-serif;
+        font-size   : 16px;
+        line-height : 24px;
+        opacity     : 0;
+
+        &_in {
+            animation           : animDescriptionIn 1s 1s;
+            animation-fill-mode : forwards;
+        }
+
+        &_out {
+            animation           : animDescriptionOut 1s;
+            animation-fill-mode : backwards;
+        }
+    }
+
+    &__envelope {
+        margin-top : 5.25rem;
+        display    : none;
+
+        @include sm {
+            margin-top : 6.75rem;
+        }
+
+        @include md {
+            margin-top : 2.75rem;
+        }
+
+        @include lg {
+            margin-top : 2rem;
+        }
+
+        &_in {
+            display : block;
+        }
+    }
+
+    &__items {
+        display     : flex;
+        align-items : center;
+        position    : relative;
+        height      : 48px;
+        margin-top  : 2rem;
+
+        @include sm {
+            margin-top : 4rem;
+        }
+
+        @include md {
+            margin-top : 1rem;
+        }
+
+        @include lg {
+            margin-top : -0.75rem;
+        }
+
+        @include hd {
+            margin-top : 2rem;
+        }
+    }
+
+    &__line {
+        width            : 52px;
+        height           : 1px;
+        background-color : $GREY_LIGHT;
+        top              : 50%;
+        margin-left      : 2rem;
+        position         : absolute;
+        overflow         : hidden;
+
+        &:before {
+            content          : '';
+            background-color : $RED;
+            position         : absolute;
+            top              : 0;
+            left             : 0;
+            width            : 100%;
+            height           : 100%;
+            transition       : all .5s ease;
+            transform        : translateX(-50px);
+        }
+
+        &_active {
+
+            &:before {
+                //для увеличения времени показа изменить здесь
+                animation           : animLine 7s;
+                animation-fill-mode : forwards;
+            }
+        }
+
+        &_reverse {
+            &:before {
+                //для увеличения времени показа изменить здесь
+                animation           : animLineReverse 7s;
+                animation-fill-mode : forwards;
+            }
+        }
+    }
+
+    &__item {
+        cursor         : pointer;
+        align-items    : center;
+        display        : flex;
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 24px;
+        line-height    : 24px;
+        text-transform : uppercase;
+        font-weight    : 800;
+        color          : $GREY_LIGHT;
+        //для увеличения времени показа изменить здесь
+        transition     : all .3s ease-in-out;
+        position       : relative;
+
+        &:nth-child(2) {
+            margin-left : 5.5rem;
+        }
+
+        &_active {
+            color       : $RED;
+            font-size   : 48px;
+            line-height : 48px;
+        }
+    }
+
+    &__navigation {
+        display        : flex;
+        flex-direction : column;
+        margin-top     : 2.5rem;
+        margin-bottom  : 9rem;
+
+        @include sm {
+            //position      : absolute;
+            position      : fixed;
+            margin-top    : -5rem;
+            margin-bottom : 0;
+            right         : 14%;
+        }
+
+        @include md {
+            margin-top : -13.5rem;
+            right      : 11%;
+        }
+
+        @include lg {
+            margin-top : -11rem;
+        }
+
+        @include hd {
+            margin-top : -15rem;
+            right      : 6%;
+        }
+    }
+
+    &__nav {
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 28px;
+        line-height    : 28px;
+        font-weight    : 800;
+        text-transform : uppercase;
+        color          : $GREY_LIGHT;
+        position       : relative;
+
+        @include sm {
+            font-size   : 38px;
+            line-height : 38px;
+        }
+
+        @include hd {
+            font-size   : 46px;
+            line-height : 46px;
+        }
+
+        &:first-child {
+            margin-bottom : 1rem;
+        }
+
+        &:hover:first-child:before {
+            animation : animPortfolioNav 1s infinite;
+        }
+
+        &:first-child:before {
+            content          : '';
+            width            : 67px;
+            height           : 22px;
+            position         : absolute;
+            left             : 53%;
+            top              : 6%;
+            background-size  : cover;
+            background-image : url("./../../images/arrow.svg");
+
+            @include sm {
+                left : 14rem;
+                top  : 18%;
+            }
+
+            @include lg {
+                top : 20%;
+            }
+
+            @include hd {
+                left : 17rem;
+                top  : 26%;
+            }
+        }
+
+        &:last-child:before {
+            content          : '';
+            width            : 67px;
+            height           : 22px;
+            position         : absolute;
+            left             : 0%;
+            bottom           : -3.5rem;
+            background-size  : cover;
+            transform        : rotate(90deg);
+            background-image : url("./../../images/arrow.svg");
+
+            @include sm {
+                left : 8%;
+            }
+        }
+
+        &:hover:last-child:before {
+            animation : animTeamNav 1s infinite;
+        }
+    }
+}
+
+@keyframes animLine {
+    95% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(50px);
+    }
+}
+
+@keyframes animLineReverse {
+    0% {
+        transform : translateX(50px);
+    }
+    95% {
+        transform : translateX(0);
+    }
+    100% {
+        transform : translateX(-50px);
+    }
+}
+
+@keyframes animTitleIn {
+    100% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+}
+
+@keyframes animTitleOut {
+    0% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+    10% {
+        transform : translateX(-5%);
+    }
+
+    100% {
+        opacity   : 0;
+        transform : translateX(100%);
+    }
+}
+
+@keyframes animSubtitleOut {
+    0% {
+        opacity   : 1;
+        transform : translateX(0);
+    }
+
+    100% {
+        opacity   : 0;
+        transform : translateX(100%);
+    }
+}
+
+@keyframes animDescriptionIn {
+    100% {
+        opacity : 1;
+    }
+}
+
+@keyframes animDescriptionOut {
+    0% {
+        opacity : 1;
+    }
+    100% {
+        opacity : 0;
+    }
+}
+
+@keyframes animPortfolioNav {
+    0% {
+        transform : translateX(0);
+    }
+
+    50% {
+        transform : translateX(6px);
+    }
+
+    100% {
+        transform : translateX(0);
+    }
+}
+
+@keyframes animTeamNav {
+    0% {
+        transform : translateY(0) rotate(90deg);
+    }
+
+    50% {
+        transform : translateY(6px) rotate(90deg);
+    }
+
+    100% {
+        transform : translateY(0) rotate(90deg);
+    }
+}
+
+.close-item{
+    animation           : animItemEnd 1s;
+    animation-fill-mode : forwards;
+}
+
+
+.welcome-dev {
+    box-shadow       : 0 0 50px rgba(0, 0, 0, .2);
+    opacity          : 0;
+    position         : relative;
+    right            : 0;
+    left             : 0;
+    background-color : $WHITE;
+    height           : 0;
+    animation           : animItemEnd 1s;
+    animation-fill-mode : forwards;
+
+    &_active {
+        height              : 100%;
+        position            : absolute;
+        opacity             : 1;
+        animation           : animItem 1s;
+        animation-fill-mode : forwards;
+
+        @include m-land {
+            animation           : animItemLand 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include sm {
+            animation           : animItemSm 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include md {
+            animation           : animItemMd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include lg {
+            animation           : animItemLg 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xl {
+            animation           : animItemXl 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xll {
+            animation           : animItemXll 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include hd {
+            animation           : animItemHd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xhd {
+            animation           : animItemXhd 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &_end {
+        animation           : animEnd 1s;
+        animation-fill-mode : forwards;
+    }
+}
+
+
+.welcome-web {
+    box-shadow : 0 0 50px rgba(0, 0, 0, .2);
+    opacity    : 0;
+    z-index    : 998;
+    position         : relative;
+    right            : 0;
+    left             : 0;
+    background-color : $WHITE;
+    height           : 0;
+    animation           : animItemEnd 1s;
+    animation-fill-mode : forwards;
+
+    &_active {
+        height              : unset;
+        position            : absolute;
+        opacity             : 1;
+        animation           : animItem 1s;
+        animation-fill-mode : forwards;
+
+        @include m-land {
+            animation           : animItemLand 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include sm {
+            animation           : animItemSm 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include md {
+            animation           : animItemMd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include lg {
+            animation           : animItemLg 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include hd {
+            animation           : animItemHd 1s;
+            animation-fill-mode : forwards;
+        }
+
+        @include xhd {
+            animation           : animItemXhd 1s;
+            animation-fill-mode : forwards;
+        }
+    }
+
+    &_end {
+        animation           : animEnd 1s;
+        animation-fill-mode : forwards;
+    }
+}
+
+
+@keyframes animItem {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-78vh);
+    }
+}
+
+@keyframes animItemLand {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-202vh);
+    }
+}
+
+@keyframes animItemSm {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(17vh);
+    }
+}
+
+@keyframes animItemMd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(6vh);
+    }
+}
+
+@keyframes animItemLg {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(4vh);
+    }
+}
+
+@keyframes animItemXl {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(-8vh);
+    }
+}
+
+@keyframes animItemXll {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(23vh);
+    }
+}
+
+@keyframes animItemHd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(15vh);
+    }
+}
+
+@keyframes animItemXhd {
+    0% {
+        transform : translateY(100vh);
+    }
+    100% {
+        transform : translateY(36vh);
+    }
+}
+
+
+@keyframes animItemEnd {
+    100% {
+        transform : translateY(100vh);
+    }
+}
+
+
+@keyframes scrollTop {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

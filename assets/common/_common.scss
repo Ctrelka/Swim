@@ -1,0 +1,87 @@
+@import "fonts";
+@import "reset";
+@import "constants";
+/*    Add Swiper styles */
+@import "./../../node_modules/swiper/dist/css/swiper.min.css";
+
+/**
+    Add Fontawesome styles
+    @import '~@fortawesome/fontawesome-free/css/all';
+*/
+
+body {
+    font-family : 'Open Sans', sans-serif;
+    position    : relative;
+    //height      : 100%;
+}
+
+.app {
+    display        : flex;
+    flex-direction : column;
+    min-height     : 100vh;
+
+    &__bg_color-grey {
+        background : radial-gradient(1234.98px at 25.37% 5.49%, #fff 0, #fbfcfc 30.43%, #e1e6e8 100%);
+    }
+
+    &__bg_color-grey_light {
+        background : #F6F6F6;
+    }
+
+    &__bg_color-red {
+        background : radial-gradient(752.32px at 52.23% 16.73%, #F55172 0%, #F5515F 31.15%, #970017 100%);
+
+    }
+
+    header {
+        flex-shrink : 0;
+    }
+
+
+    main {
+        flex     : 1;
+
+        &__h_100vh {
+            height : 100vh;
+        }
+    }
+
+    footer {
+        flex-shrink : 0;
+    }
+
+    .page404, .title, footer {
+        position : relative;
+        z-index  : 1;
+    }
+
+    .program {
+        position : relative;
+        z-index  : 2;
+    }
+
+
+}
+
+@include loader();
+@include container();
+@include base-setup();
+
+/**
+    Add Editor
+    @include editor-content();
+*/
+@include editor-content {
+    color : #565656;
+}
+
+;
+
+@include customize-support {
+    /**
+        Add any css
+     */
+}
+
+
+

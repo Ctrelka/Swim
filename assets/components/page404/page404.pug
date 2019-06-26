@@ -1,0 +1,10 @@
+mixin page404()
+    +b.page404
+        .container
+            +e.inner
+                +e.text404 404
+                +e.wrapper
+                    +e.text Page not found
+                    +e.desription We’re sorry, the page you have looked for does not exist in our database! Maybe go to our home page
+            +e.image(src=require("./../images/maks.png"), alt="maks")
+            +e.image-eyes(src=require("./../images/maks2.png"), alt="maks")

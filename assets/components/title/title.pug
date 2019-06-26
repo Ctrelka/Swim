@@ -1,0 +1,16 @@
+mixin titleBig(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
+    +b.titleBig
+        +e.H1(class = `text ${titleColorMod}`)= title
+
+
+mixin titleLittle(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
+    +b.titleLittle
+        +e.H1.text(class = `text ${titleColorMod}`)= title
+
+
+mixin titleMedium(title,colorMod)
+    - var titleColorMod = colorMod ? colorMod : ''
+    +b.titleMedium
+        +e.H1.text(class = `text ${titleColorMod}`)= title

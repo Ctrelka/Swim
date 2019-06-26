@@ -1,0 +1,53 @@
+mixin contact()
+    +b.contactPage
+        .container
+            +e.inner
+                +titleBig("contact")
+                +e.inner-container
+                    .container
+                        +e.person.row
+                            +e.person-item-first.col-12.col-md-6
+                                +e.person-item-first-image
+                                    +e.person-item-first-image-foto(src=require("./../images/person-one.png"), alt='Person')
+                                +e.person-item-first-about
+                                    +e.P.person-item-first-about-name Olga Glazkova
+                                    +e.SPAN.person-item-first-about-text marketing consultant
+                                    +e.SPAN.person-item-first-about-text olga@mastakstudio.com
+                            +e.person-item-second.col-12.col-md-6
+                                +e.person-item-second-image
+                                    +e.person-item-second-image-foto(src=require("./../images/person-two.png"), alt='Person')
+                                +e.person-item-second-about
+                                    +e.P.person-item-second-about-name Max Nikolaev
+                                    +e.SPAN.person-item-second-about-text marketing consultant
+                                    +e.SPAN.person-item-second-about-text max@mastakstudio.com
+                    .container
+                        +e.info.row
+                            +e.info-adrress.col-12.col-sm-6
+                                +e.info-adrress-tabs
+                                    +e.SPAN.info-adrress-tabs-item US
+                                    +e.SPAN.info-adrress-tabs-item Belarus
+                                +e.info-adrress-contents
+                                    +e.info-adrress-content
+                                        +e.info-adrress-content-link(href='tel:+13128743507') +1 312 874 3507
+                                        +e.info-adrress-content-text 1620 S Michigan Ave, Suite 1214 Chicago, IL 60616
+                                        +button('view on map','button__color_red')
+                                    +e.info-adrress-content
+                                        +e.info-adrress-content-link(href='tel:+13128743507') +1 312 874 3507
+                                        +e.info-adrress-content-text 1620 S Michigan Ave, Suite 1214 Chicago, IL 60616
+                                        +button('view on map','button__color_red')
+                            +e.info-message.col-12.col-sm-6
+                                form(id="info-message" method='POST' action='/')
+                                    +e.info-message-input.row
+                                        +e.info-message-input-inner.col-6
+                                            +input("text", "username","Name")
+                                            +e.info-message-input-inner-response-name
+                                        +e.info-message-input-inner.col-6
+                                            +input("text", "useremail","E-mail")
+                                            +e.info-message-input-inner-response-email
+                                    +e.info-message-textarea
+                                        +e.textarea
+                                            +textarea("usermessage" , "Message")
+                                            +e.info-message-input-inner-response
+                                    +e.button
+                                        +buttonForm('sent message','button__submit button__submit_color_grey',"submit","userbutton")
+                                +preloader('preloader__message')

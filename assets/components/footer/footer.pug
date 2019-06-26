@@ -1,0 +1,6 @@
+mixin footer(posMod)
+    - var footerPosMod = posMod ? posMod : ''
+    +b(class = `footer ${footerPosMod}`)
+        +e.inner
+            +e.SPAN.text This website uses cookies to improve your experience.
+            +e.link(href="#") Allow cookies. Cookie Policy

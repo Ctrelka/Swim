@@ -1,0 +1,46 @@
+mixin welcome()
+    +b.welcome
+        .container
+            +e.inner-class
+                +e.inner-content
+                    +e.tabs
+                        +e.tab._first._active
+                            +e.inner
+                                +e.wrapper
+                                    +e.img._first._in(src=require("./../images/welcome.svg"), alt="welcome")
+                                +e.content
+                                    +e.title._first._in
+                                        +titleBig('web','titleBig__color_red')
+                                    +e.subtitle._first._in development
+                                    +e.description._first._in Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
+                            +e.envelope._first._in
+                                +button('more','button__color_red')
+                        +e.tab._second
+                            +e.inner
+                                +e.wrapper
+                                    +e.img._second(src=require("./../images/welcome.svg"), alt="welcome")
+                                +e.content
+                                    +e.title._second
+                                        +titleBig('DESIGN','titleBig__color_grey')
+                                    +e.subtitle._second & dranding
+                                    +e.description._second Get a tailored, handcrafted software for your business, not an «out of the box» readymade template. We use the industry’s best practices to automate processes for any expansion of our business.
+                            +e.envelope._second
+                                +button('more','button__color_grey')
+                    +e.UL.items
+                        +e.LI.item._first._active 1
+                        +e.LI.item._second 2
+                        +e.line
+                    +e.navigation
+                        +e.nav(href="#") portfolio
+                        +e.nav(href="#") team
+        .welcome-dev
+            +e.scroll(src=require("./../images/download.svg"), alt="welcome")
+            +process()
+            +types()
+            +technologiesHome()
+            +swiperWe()
+            +footer-line()
+        .welcome-web
+            +e.scroll(src=require("./../images/download.svg"), alt="welcome")
+            +homeWeb()
+            +footer-line()

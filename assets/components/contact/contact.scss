@@ -1,0 +1,474 @@
+@import "./../../common/constants";
+
+.contactPage {
+    background : radial-gradient(1234.98px at 25.37% 5.49%, #FFFFFF 0%, #FBFCFC 30.43%, #E1E6E8 100%);
+
+    &__inner {
+        margin-top : 2rem;
+
+        @include lg {
+            margin-top : 0rem;
+        }
+    }
+
+    &__inner-container {
+        @include md {
+            margin-top    : 1rem;
+            padding-left  : 40px;
+            padding-right : 40px;
+        }
+
+        @include lg {
+            margin-top    : 0rem;
+            padding-left  : 152px;
+            padding-right : 152px;
+        }
+
+        @include hd {
+            margin-top    : 1rem;
+            padding-left  : 272px;
+            padding-right : 272px;
+        }
+    }
+
+    &__person {
+        &:nth-child(2) {
+            margin-top : 1rem;
+        }
+
+        @include md {
+            margin-top : -7rem;
+
+            &:before {
+                content    : "";
+                position   : absolute;
+                height     : 2px;
+                background : #979797;
+                width      : 100%;
+                bottom     : -2px;
+                left       : 0;
+            }
+        }
+
+        @include lg {
+            margin-top : -8.5rem;
+        }
+
+        @include hd {
+            margin-top : -6.5rem;
+        }
+    }
+
+    &__person-item-first {
+        display         : flex;
+        justify-content : flex-end;
+        position        : relative;
+        margin-top      : 1rem;
+
+        &:before {
+            content    : "";
+            position   : absolute;
+            height     : 2px;
+            background : #979797;
+            width      : 100%;
+            bottom     : 0;
+            left       : 0;
+
+            @include md {
+                display : none;
+            }
+        }
+
+        @include m-land {
+            justify-content : center;
+        }
+
+        @include sm {
+            justify-content : flex-start;
+            margin-top      : -5rem;
+        }
+
+        @include md {
+            margin-top : 0px;
+        }
+    }
+
+    &__person-item-first-image {
+        width           : 183px;
+        height          : 184px;
+        display         : flex;
+        justify-content : center;
+        position        : absolute;
+        left            : -20px;
+
+        @include m-land {
+            left         : 0px;
+            position     : relative;
+            margin-right : 2rem;
+        }
+
+        @include sm {
+            width        : 234px;
+            height       : 239px;
+            left         : 0px;
+            position     : relative;
+            margin-right : 2rem;
+            margin-left  : 1rem;
+        }
+
+        @include md {
+            width        : 200px;
+            height       : 205px;
+            margin-right : 0rem;
+            margin-left  : 0rem;
+        }
+
+        @include hd {
+            width  : 280px;
+            height : 287px;
+        }
+    }
+
+    &__person-item-first-image-foto {
+        width  : 100%;
+        height : auto;
+    }
+
+    &__person-item-first-about {
+        display        : flex;
+        flex-direction : column;
+        padding-bottom : 4rem;
+
+        @include sm {
+            padding-bottom  : 1.5rem;
+            justify-content : flex-end;
+        }
+
+        @include md {
+            padding-left : 0.5rem;
+        }
+
+        @include hd {
+            padding-bottom : 5.5rem;
+        }
+    }
+
+    &__person-item-first-about-name {
+        font-family   : "Gilroy";
+        font-style    : normal;
+        font-weight   : 800;
+        font-size     : 22px;
+        line-height   : 32px;
+        color         : #4B5661;
+        margin-top    : 2rem;
+        margin-bottom : 0.5rem;
+
+        @include sm {
+            font-family : Gilroy;
+            font-style  : normal;
+            font-weight : 800;
+            font-size   : 26px;
+            line-height : 32px;
+            color       : #4B5661;
+        }
+
+        @include hd {
+            font-size   : 26px;
+            line-height : 32px;
+        }
+    }
+
+    &__person-item-first-about-text {
+        font-family : "Open Sans", sans-serif;
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 14px;
+        line-height : 24px;
+        color       : #626262;
+
+        @include sm {
+            font-family : Open Sans, sans-serif;
+            font-style  : normal;
+            font-weight : normal;
+            font-size   : 16px;
+            line-height : 24px;
+            color       : #626262;
+        }
+    }
+
+    &__person-item-second {
+        display         : flex;
+        justify-content : flex-end;
+        flex-direction  : row-reverse;
+        position        : relative;
+        margin-top      : 2rem;
+        overflow-y      : hidden;
+
+        &:before {
+            content    : "";
+            position   : absolute;
+            height     : 2px;
+            background : #979797;
+            width      : 100%;
+            bottom     : 0;
+            left       : 0;
+
+            @include md {
+                display : none;
+            }
+        }
+
+        @include m-land {
+            justify-content : center;
+        }
+
+        @include sm {
+            justify-content : unset;
+            margin-top      : 0px;
+        }
+
+        @include md {
+            flex-direction : row;
+        }
+    }
+
+    &__person-item-second-image {
+        width           : 183px;
+        height          : 184px;
+        display         : flex;
+        justify-content : center;
+        position        : absolute;
+        right           : -0.5rem;
+
+        @include m-land {
+            right       : 0px;
+            position    : relative;
+            margin-left : 2rem;
+        }
+
+        @include sm {
+            width        : 234px;
+            height       : 239px;
+            right        : 0px;
+            position     : relative;
+            margin-left  : 2rem;
+            margin-right : 1rem;
+        }
+
+        @include md {
+            width        : 200px;
+            height       : 205px;
+            margin-left  : 0rem;
+            margin-right : 0rem;
+        }
+
+        @include hd {
+            width  : 280px;
+            height : 287px;
+        }
+    }
+
+    &__person-item-second-image-foto {
+        width  : 100%;
+        height : auto;
+    }
+
+    &__person-item-second-about {
+        display        : flex;
+        flex-direction : column;
+        padding-bottom : 4rem;
+
+        @include sm {
+            padding-bottom  : 1.5rem;
+            justify-content : flex-end;
+        }
+
+        @include md {
+            padding-left : 0.5rem;
+        }
+
+        @include hd {
+            padding-bottom : 5.5rem;
+        }
+    }
+
+    &__person-item-second-about-name {
+        font-family   : "Gilroy";
+        font-style    : normal;
+        font-weight   : 800;
+        font-size     : 22px;
+        line-height   : 32px;
+        color         : #4B5661;
+        margin-top    : 2rem;
+        margin-bottom : 0.5rem;
+
+        @include sm {
+            font-family : Gilroy;
+            font-style  : normal;
+            font-weight : 800;
+            font-size   : 26px;
+            line-height : 32px;
+            color       : #4B5661;
+            text-align  : right;
+        }
+
+        @include md {
+            text-align : left;
+        }
+    }
+
+    &__person-item-second-about-text {
+        font-family : "Open Sans", sans-serif;
+        font-style  : normal;
+        font-weight : normal;
+        font-size   : 14px;
+        line-height : 24px;
+        color       : #626262;
+
+        @include sm {
+            font-family : Open Sans, sans-serif;
+            font-style  : normal;
+            font-weight : normal;
+            font-size   : 16px;
+            line-height : 24px;
+            color       : #626262;
+            text-align  : right;
+        }
+
+        @include md {
+            text-align : left;
+        }
+    }
+
+    &__info {
+
+        @include sm {
+            margin-top : 2rem;
+            display    : flex;
+        }
+
+        @include md {
+            margin-top : 3rem;
+        }
+
+        @include lg {
+            margin-top : 1rem;
+        }
+
+        @include hd {
+            margin-top : 6rem;
+        }
+    }
+
+    &__info-adrress-content {
+        display : none;
+
+        &_active {
+            display : block;
+        }
+    }
+
+    &__info-adrress-tabs-item {
+        font-family : "Open Sans", sans-serif;
+        font-style  : italic;
+        font-weight : normal;
+        font-size   : 14px;
+        line-height : 14px;
+        color       : #CDD6DE;
+        cursor      : pointer;
+
+        &_active {
+            color : #4B5661;
+        }
+
+        &:nth-child(2) {
+            margin-left : 1rem;
+        }
+    }
+
+    &__info-adrress-tabs {
+        margin-top    : 2rem;
+        margin-bottom : 2rem;
+
+        @include sm {
+            margin-top : 0rem;
+        }
+    }
+
+    &__info-adrress-content-link {
+        font-family : "Gilroy";
+        font-style  : normal;
+        font-weight : 800;
+        font-size   : 20px;
+        line-height : 20px;
+        color       : #4B5661;
+
+        @include md {
+            font-size   : 26px;
+            line-height : 32px;
+        }
+    }
+
+    &__info-adrress-content-text {
+        font-family   : "Gilroy";
+        font-style    : normal;
+        font-weight   : 800;
+        font-size     : 20px;
+        line-height   : 20px;
+        color         : #4B5661;
+        margin-top    : 1rem;
+        margin-bottom : 2rem;
+
+        @include md {
+            font-size     : 26px;
+            line-height   : 32px;
+            margin-bottom : 1rem;
+        }
+    }
+
+    &__info-adrress {
+        margin-bottom : 2rem;
+    }
+
+    &__info-message-input {
+        display         : flex;
+        justify-content : space-between;
+    }
+
+    &__info-message-textarea {
+        margin-top : 1rem;
+        height     : 92px;
+
+        @include md {
+            height : 110px;
+        }
+    }
+
+    &__button {
+        margin-top    : 1.5rem;
+        margin-bottom : 2rem;
+
+        @include lg {
+            margin-bottom : 0rem;
+        }
+
+        @include hd {
+            margin-bottom : 2rem;
+        }
+    }
+
+    &__info-message-input-inner-response {
+        font-family : 'Open Sans', sans-serif;
+        font-size   : 10px;
+    }
+
+    &__info-message-input-inner-response-name {
+        font-family : 'Open Sans', sans-serif;
+        font-size   : 10px;
+    }
+
+    &__info-message-input-inner-response-email {
+        font-family : 'Open Sans', sans-serif;
+        font-size   : 10px;
+    }
+}

@@ -1,0 +1,54 @@
+@import "./../../common/constants";
+
+.footer{
+    &__inner{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include sm {
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &__text{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #8D9BB0;
+    }
+
+    &__link{
+        font-style: italic;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #4B5661;
+        padding-left:0.25rem;
+        padding-top: 0.5rem;
+
+        @include sm {
+            padding-top: 0;
+        }
+    }
+
+    &__pos_a{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+
+        @include sm{
+            left: unset;
+            right: unset;
+        }
+
+    }
+}

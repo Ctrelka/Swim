@@ -1,0 +1,178 @@
+@import "./../../common/constants";
+
+$RED : #D0021B;
+$GREY_DARK : #4B5661;
+$GREY_MIDDLE : #626262;
+
+.page404 {
+
+    &__inner {
+        position : relative;
+        z-index  : 10;
+        top      : 12rem;
+
+        @include sm {
+            width       : 47%;
+            margin-left : 6rem;
+            z-index     : initial;
+            top         : 17rem;
+        }
+
+        @include md {
+            display     : flex;
+            align-items : center;
+            width       : 86%;
+            margin-left : 8rem;
+            top         : 11rem;
+        }
+
+        @include lg {
+            margin-left : 15rem;
+            width       : 70%;
+            top         : 9rem;
+        }
+
+        @include hd {
+            margin-left : 19rem;
+            width       : 73%;
+            top         : 13rem;
+        }
+    }
+
+    &__text404 {
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 120px;
+        font-weight    : 800;
+        line-height    : 1;
+        text-transform : uppercase;
+        color          : $RED;
+        padding-bottom : .5rem;
+
+        @include sm {
+            font-size      : 200px;
+            line-height    : 140px;
+            padding-bottom : 2rem;
+        }
+
+        @include md {
+            font-size      : 172px;
+            line-height    : 172px;
+            padding-bottom : initial;
+            padding-right  : 8.75rem;
+        }
+
+        @include hd {
+            font-size     : 250px;
+            line-height   : 250px;
+            padding-right : 14.5rem;
+        }
+    }
+
+    &__text {
+        font-family    : 'Gilroy', sans-serif;
+        font-size      : 30px;
+        font-weight    : 800;
+        line-height    : 30px;
+        text-transform : uppercase;
+        color          : $GREY_DARK;
+        padding-bottom : 1rem;
+
+        @include md {
+            font-size   : 36px;
+            line-height : 36px;
+        }
+
+        @include hd {
+            font-size      : 46px;
+            line-height    : 46px;
+            padding-bottom : 2rem;
+        }
+    }
+
+    &__desription {
+        font-family : 'Open Sans', sans-serif;
+        font-size   : 14px;
+        line-height : 14px;
+        color       : $GREY_MIDDLE;
+
+        @include md {
+            font-size   : 16px;
+            line-height : 16px;
+        }
+
+        @include hd {
+            font-size   : 24px;
+            line-height : 24px;
+        }
+    }
+
+    &__image {
+        position : absolute;
+        top      : 0;
+        width    : 71%;
+        right    : 0;
+        cursor   : pointer;
+
+        @include sm {
+            width : 47%;
+            top   : 34%;
+            right : 2%;
+        }
+
+        @include md {
+            width : 24%;
+            top   : 74%;
+            right : 38%;
+        }
+
+        @include lg {
+            width : 20%;
+            top   : 58%;
+            right : 40%;
+        }
+
+        @include hd {
+            width : 22%;
+            top   : 52%;
+            right : 39%;
+        }
+    }
+
+    &__image-eyes {
+        position   : absolute;
+        top        : 0;
+        width      : 71%;
+        right      : 0;
+        opacity    : 0;
+        z-index    : 100;
+        transition : all .25s;
+
+        @include sm {
+            width : 47%;
+            top   : 34%;
+            right : 2%;
+        }
+
+        @include md {
+            width : 24%;
+            top   : 74%;
+            right : 38%;
+        }
+
+        @include lg {
+            width : 20%;
+            top   : 58%;
+            right : 40%;
+        }
+
+        @include hd {
+            width : 22%;
+            top   : 52%;
+            right : 39%;
+        }
+
+        &:hover {
+            opacity : 1;
+        }
+    }
+}

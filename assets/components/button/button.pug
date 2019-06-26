@@ -1,0 +1,4 @@
+mixin button(text, modClass)
+    - var mod = modClass ? modClass: '';
+    a(class=`button ${mod}`, href="#")
+        span.button__text= text

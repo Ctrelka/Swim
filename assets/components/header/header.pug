@@ -1,0 +1,33 @@
+mixin header(mod)
+    +b.HEADER.header(class=`${mod}`)
+        .container
+            +e.inner
+                +e.logo(href='#')
+                    +e.logo-img(src=require("./../images/logo.png"), alt='Mastak')
+                +e.link
+                    +e.link-text(href='#') contact us
+                    +e.burger(href="#")
+                        +e.SPAN.burger-line
+                        +e.SPAN.burger-line
+                    +e.close(href="#")
+                        +e.SPAN.burger-line.close-line
+                        +e.SPAN.burger-line.close-line
+        +e.NAV.menu
+            .container
+                +e.menu-title MENU
+                    +e.UL.menu-list
+                        +e.LI.menu-list-item
+                            a(href='#') web
+                        +e.LI.menu-list-item
+                            a(href='#') design
+                        +e.LI.menu-list-item_active.menu-list-item_active-link-load
+                            a(href='#') portfolio
+                        +e.LI.menu-list-item
+                            a(href='#') team
+                        +e.LI.menu-list-item
+                            a(href='#') contact
+                    +e.menu-soc
+                        +e.menu-soc-item-link(href='#')
+                                +e.menu-soc-item-link-img(src=require("./../images/fb.png"), alt='Facebook')
+                        +e.menu-soc-item-link(href='#')
+                                +e.menu-soc-item-link-img(src=require("./../images/inst.png"), alt='Facebook')
